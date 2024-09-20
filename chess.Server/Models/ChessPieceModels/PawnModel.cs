@@ -14,7 +14,7 @@ namespace chess.Server.Models.ChessPieceModels
                 if (state.GetTileState(X, Y + 1, IsWhite) == TileEnum.Empty)
                 {
                     moves.Add((X, Y + 1));
-                    if (state.GetTileState(X, Y + 2, IsWhite) == TileEnum.Empty)
+                    if (state.GetTileState(X, Y + 2, IsWhite) == TileEnum.Empty && Y == 1)
                     {
                         moves.Add((X, Y + 2));
                     }
@@ -36,7 +36,7 @@ namespace chess.Server.Models.ChessPieceModels
                 if (state.GetTileState(X, Y - 1, IsWhite) == TileEnum.Empty)
                 {
                     moves.Add((X, Y - 1));
-                    if (state.GetTileState(X, Y - 2, IsWhite) == TileEnum.Empty)
+                    if (state.GetTileState(X, Y - 2, IsWhite) == TileEnum.Empty && Y == 6)
                     {
                         moves.Add((X, Y - 2));
                     }

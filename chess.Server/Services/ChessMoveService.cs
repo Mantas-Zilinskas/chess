@@ -35,7 +35,7 @@ namespace chess.Server.Services
         }*/
 
         //extract a list of piece coordinates
-        public List<(int, int)> GetPieces(Chessboard state) {
+       /* public List<(int, int)> GetPieces(Chessboard state) {
             List<(int, int)> pieces = new List<(int, int)>();
             for (int y = 0; y < 8; ++y) {
                 for (int x = 0; x < 8; ++x) {
@@ -46,10 +46,10 @@ namespace chess.Server.Services
             }
             Console.WriteLine(pieces);
             return pieces;
-        }
+        }*/
 
         //get potential moves coordinates
-       public List <(int, int)> GetPieceMoves(Chessboard state, (int, int) piece) {
+       /*public List <(int, int)> GetPieceMoves(Chessboard state, (int, int) piece) {
             List<(int, int)> moves = new List<(int, int)>();
 
             switch (state.State[piece.Item2][piece.Item1]) {
@@ -112,6 +112,6 @@ namespace chess.Server.Services
                     break;            
             }
             return moves;
-        }
+        }*/
     }
 }
