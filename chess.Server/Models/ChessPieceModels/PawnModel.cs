@@ -4,7 +4,7 @@ namespace chess.Server.Models.ChessPieceModels
 {
     public class PawnModel : ChessPieceModel
     {
-        public PawnModel(bool white, int x, int y):base(white, x, y) { }
+        public PawnModel(int x, int y, bool white) :base(x, y, white) { }
         public override List<(int, int)> GetMoves(Chessboard state) {
 
             List<(int,int)> moves = new List<(int, int)> ();

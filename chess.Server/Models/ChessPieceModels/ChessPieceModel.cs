@@ -7,8 +7,8 @@
         public int Y { get; set; }
         public abstract List<(int, int)> GetMoves(Chessboard state);
 
-        protected ChessPieceModel(bool white, int x, int y) {
-            IsWhite = white;
+        protected ChessPieceModel(int x, int y, bool isWhite) {
+            IsWhite = isWhite;
             X = x;
             Y = y;
         }

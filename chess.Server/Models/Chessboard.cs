@@ -5,6 +5,10 @@ namespace chess.Server.Models
 {
     public class Chessboard
     {
+        public Chessboard() 
+        {
+            State = new List<ChessPieceModel>();
+        }
         public List<ChessPieceModel> State { get; set; }
         public int Difficulty { get; set; }
 
