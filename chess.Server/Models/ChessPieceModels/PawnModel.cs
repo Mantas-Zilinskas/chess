@@ -5,6 +5,13 @@ namespace chess.Server.Models.ChessPieceModels
     public class PawnModel : ChessPieceModel
     {
         public PawnModel(int x, int y, bool white) :base(x, y, white) { }
+
+        public override object Clone()
+        {
+            PawnModel clone = new PawnModel(X, Y, IsWhite);
+            return clone;
+        }
+
         public override List<(int, int)> GetMoves(Chessboard state) {
 
             List<(int,int)> moves = new List<(int, int)> ();

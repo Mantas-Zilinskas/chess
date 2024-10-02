@@ -7,6 +7,12 @@ namespace chess.Server.Models.ChessPieceModels
         {
         }
 
+        public override object Clone()
+        {
+            RookModel clone = new RookModel(X, Y, IsWhite);
+            return clone;
+        }
+
         public override List<(int, int)> GetMoves(Chessboard state)
         {
             List<(int, int)> moves = new List<(int, int)>();
